@@ -5,8 +5,10 @@ public class Main {
         Task3();
         Task4();
         Task5();
+        Task6();
 
     }
+
     public static void Task1() {
      /*Представим, что мы работаем в банке. У нашего банка есть сайт, на который можно зайти с компьютера или телефона,
      а также мобильное приложение. И нам, и клиенту удобнее с телефона пользоваться мобильным приложением.
@@ -28,14 +30,15 @@ public class Main {
     «Установите версию приложения для Android по ссылке».
       */
         System.out.println("\n" + "Задание 1" + "\n");
-    int clientOS = 1;
-    if (clientOS == 1) {
-        System.out.println("Установите версию приложения для Android по ссылке");
-    } else {
-        System.out.println("Установите версию приложения для iOS по ссылке");
+        int clientOS = 1;
+        if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
     }
-    }
-    public static void Task2 () {
+
+    public static void Task2() {
     /*К нам пришли коллеги и сообщили, что нам нужно знать не только операционную систему телефона, но и год его создания:
     от этого зависит, подойдет ли приложение для телефона или оно просто не установится.
     Если телефон произведен с 2015 по нынешний год, то приложение будет работать корректно.
@@ -51,19 +54,20 @@ public class Main {
     Для обозначения года создания используйте переменную clientDeviceYear, где необходимо указать 2015 год.
      */
         System.out.println("\n" + "Задание 2" + "\n");
-    int clientOS = 0;
-    int clientDeviceYear = 2015;
-    if (clientOS == 1 && clientDeviceYear >= 2015) {
-        System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOS == 0 && clientDeviceYear >= 2015){
+        int clientOS = 0;
+        int clientDeviceYear = 2015;
+        if (clientOS == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOS == 1 && clientDeviceYear < 2015) {
-        System.out.println("Установите облегченную версию приложения для Android по ссылке");
-    }  else {
-        System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        }
     }
-    }
-    public static void Task3 () {
+
+    public static void Task3() {
         /*Напишите программу, которая определяет, является ли год високосным или нет.
     Переменную года назовите year, в которую можно подставить значение интересующего нас года. Например, 2021.
     Программа должна определять, високосный год или нет, и выводить соответствующее сообщение:
@@ -73,14 +77,15 @@ public class Main {
     Небольшая справка: високосным является каждый четвертый год, но не является каждый сотый. Также високосным является каждый четырехсотый год.
          */
         System.out.println("\n" + "Задание 3" + "\n");
-    int year = 2036;
-    if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
-        System.out.println(year + " год является високосным");
-    } else {
-        System.out.println(year + " год не является високосным");
+        int year = 2036;
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
+        }
     }
-    }
-    public static void Task4 () {
+
+    public static void Task4() {
         /*Вернемся к делам банковским. У нас хороший банк, поэтому для наших клиентов мы организуем доставку банковских карт
     на дом с четкой датой доставки. Чтобы известить клиента о том, когда будет доставлена его карта, нам нужно знать
     расстояние от нашего офиса до адреса доставки.
@@ -94,18 +99,20 @@ public class Main {
     Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
          */
         System.out.println("\n" + "Задание 4" + "\n");
-    int deliveryDistance = 95;
-    int deliveryDay = 1;
-    if (deliveryDistance <=20 ){
-        System.out.println("Потребуется дней: " +deliveryDay);
-    } else if (deliveryDistance >20 && deliveryDistance <= 60){
-        deliveryDay++;
-        System.out.println("Потребуется дней: " +deliveryDay);
-    } else if (deliveryDistance >60 && deliveryDistance <=100) {
-        deliveryDay = deliveryDay +2;
-        System.out.println("Потребуется дней: " +deliveryDay);    }
+        int deliveryDistance = 95;
+        int deliveryDay = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("Потребуется дней: " + deliveryDay);
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            deliveryDay++;
+            System.out.println("Потребуется дней: " + deliveryDay);
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryDay = deliveryDay + 2;
+            System.out.println("Потребуется дней: " + deliveryDay);
+        }
     }
-    public static void Task5 () {
+
+    public static void Task5() {
         /*Напишите программу, которая определяет по номеру месяца в году, к какому сезону этот месяц принадлежит.
         Например, 1 месяц (он же январь) принадлежит к сезону зима.
         Для написания программы используйте оператор switch. Для обозначения номера месяца используйте переменную monthNumber = 12.
@@ -113,45 +120,46 @@ public class Main {
          */
         System.out.println("\n" + "Задание 5" + "\n");
         int monthNumber = 12;
-    switch (monthNumber) {
-        case 1:
-            System.out.println("Январь");
-            break;
-        case 2:
-            System.out.println("Февраль");
-            break;
-        case 3:
-            System.out.println("Март");
-            break;
-        case 4:
-            System.out.println("Апрель");
-            break;
-        case 5:
-            System.out.println("Май");
-            break;
-        case 6:
-            System.out.println("Июнь");
-            break;
-        case 7:
-            System.out.println("Июль");
-            break;
-        case 8:
-            System.out.println("Август");
-            break;
-        case 9:
-            System.out.println("Сентябрь");
-            break;
-        case 10:
-            System.out.println("Октябрь");
-            break;
-        case 11:
-            System.out.println("Ноябрь");
-            break;
-        case 12:
-            System.out.println("Декабрь");
-            break;
-        default:
-            System.out.println("Такого месяца не существует"); }
+        switch (monthNumber) {
+            case 1:
+                System.out.println("Январь");
+                break;
+            case 2:
+                System.out.println("Февраль");
+                break;
+            case 3:
+                System.out.println("Март");
+                break;
+            case 4:
+                System.out.println("Апрель");
+                break;
+            case 5:
+                System.out.println("Май");
+                break;
+            case 6:
+                System.out.println("Июнь");
+                break;
+            case 7:
+                System.out.println("Июль");
+                break;
+            case 8:
+                System.out.println("Август");
+                break;
+            case 9:
+                System.out.println("Сентябрь");
+                break;
+            case 10:
+                System.out.println("Октябрь");
+                break;
+            case 11:
+                System.out.println("Ноябрь");
+                break;
+            case 12:
+                System.out.println("Декабрь");
+                break;
+            default:
+                System.out.println("Такого месяца не существует");
+        }
         switch (monthNumber) {
             case 1:
             case 2:
@@ -177,5 +185,51 @@ public class Main {
                 System.out.println("Такого времени года не существует");
         }
     }
+
+    public static void Task6() {
+        /*И снова дела банковские, уже сложнее.
+    В нашем банке можно, кроме дебетовых, получать еще и кредитные карты. У таких карт есть допустимый лимит средств,
+    рассчитывается исходя из возраста клиента и его зарплаты.
+
+    Правила расчета следующие:
+    Людям старше (или равно) 23 лет мы предоставляем лимит в размере 3 зарплат.
+    Людям младше 23 лет мы предоставляем лимит в размере 2 зарплат.
+    Если заработная плата клиента выше (или равно) 50 тысяч, мы увеличиваем лимит в 1.2 раза.
+    Если заработная плата выше (или равно) 80 тысяч, мы увеличиваем лимит в 1.5 раза.
+    Наша задача: написать программу, которая показывает, какую сумму на кредитке может получить клиент.
+    Вводные данные: переменная age = 19 для обозначения возраста клиента, salary = 58_000 для обозначения зарплаты клиента.
+    Увеличения не могут быть применены одновременно. Необходимо вывести максимальный лимит в консоль в формате:
+    «Мы готовы выдать вам кредитную карту с лимитом *** рублей».
+         */
+        System.out.println("\n" + "Задание 6" + "\n");
+        int age = 19;
+        int salary = 50000;
+        float limit = salary;
+        if (age >= 23 && salary >= 50000) {
+            limit = (float) (limit * 1.2 * 3);       }
+        else if (age <= 23 && salary >= 50000) {
+            limit = (float) (limit * 1.2 * 2);  }
+            else if (age >= 23 && salary >= 80000) {
+                limit = (float) (limit * 1.5 * 3);   }
+            else if (age <= 23 && salary >= 80000) {
+                limit = (float) (limit * 1.5 * 2);   }
+        else if (age >= 23 && salary < 50000) {
+            limit = (float) (limit * 3);            }
+        else if (age <= 23 && salary < 50000) {
+            limit = (float) (limit * 2);
+        }
+        else {
+            System.out.println("В выдаче кредитной карты отказано"); }
+        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + limit + " рублей");
+        }
+    public static void Task7() {
+        /*
+         */
+        System.out.println("\n" + "Задание 7" + "\n");
+
+
     }
+
+}
+
 
