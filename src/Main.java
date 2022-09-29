@@ -3,6 +3,7 @@ public class Main {
         Task1();
         Task2();
         Task3();
+        Task4();
 
     }
     public static void Task1() {
@@ -79,11 +80,36 @@ public class Main {
     }
     }
     public static void Task4 () {
-        /*
+        /*Вернемся к делам банковским. У нас хороший банк, поэтому для наших клиентов мы организуем доставку банковских карт
+    на дом с четкой датой доставки. Чтобы известить клиента о том, когда будет доставлена его карта, нам нужно знать
+    расстояние от нашего офиса до адреса доставки.
+    Правила доставки такие:
+    Доставка в пределах 20 км занимает сутки.
+    Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
+    Доставка в пределах 60 км до 100 км добавляет еще одни сутки.
+    То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
+    Напишите программу, которая выдает сообщение в консоль:
+    "Потребуется дней: " + срок доставки
+    Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
          */
         System.out.println("\n" + "Задание 4" + "\n");
+    int deliveryDistance = 95;
+    int deliveryDay = 1;
+    if (deliveryDistance <=20 ){
+        System.out.println("Потребуется дней: " +deliveryDay);
+    } else if (deliveryDistance >20 && deliveryDistance <= 60){
+        deliveryDay++;
+        System.out.println("Потребуется дней: " +deliveryDay);
+    } else if (deliveryDistance >60 && deliveryDistance <=100) {
+        deliveryDay++;
+        System.out.println("Потребуется дней: " +deliveryDay);
+    }
+    }
+    public static void Task5 () {
+        /*
+         */
+        System.out.println("\n" + "Задание 5" + "\n");
 
     }
-
 
 }
